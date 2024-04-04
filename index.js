@@ -69,7 +69,7 @@ if (!CHANNELS) {
     CHANNELS = CHANNELS.split(",")
 }
 if (!SEND_USERNAME) {
-    SEND_USERNAME = "true"
+    SEND_USERNAME = "false"
 }
 if (!ENABLE_TTS) {
     ENABLE_TTS = "false"
