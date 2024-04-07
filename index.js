@@ -56,7 +56,7 @@ if (!TWITCH_AUTH) {
     console.log("No TWITCH_AUTH found. Using oSetinhasBot auth as default.")
 }
 if (!COMMAND_NAME) {
-    COMMAND_NAME = ["!gpt"]
+    COMMAND_NAME = ["4cidru"]
 } else {
     // split commands by comma into array
     COMMAND_NAME = COMMAND_NAME.split(",")
