@@ -32,7 +32,7 @@ export class OpenAIOperations {
             const response = await this.openai.chat.completions.create({
                 model: this.model_name,
                 messages: this.messages,
-                temperature: 1,
+                temperature: 0.1,
                 max_tokens: 256,
                 top_p: 1,
                 frequency_penalty: 0,
@@ -61,7 +61,7 @@ export class OpenAIOperations {
             const response = await this.openai.completions.create({
               model: "gpt-3.5-turbo",
               prompt: text,
-              temperature: 1,
+              temperature: 0.1,
               max_tokens: 256,
               top_p: 1,
               frequency_penalty: 0,
