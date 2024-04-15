@@ -209,8 +209,7 @@ resetModelHistory();
                 console.error(error);
             }
         }
-    }
-});
+    };
 
 app.ws('/check-for-updates', (ws, req) => {
     ws.on('message', (message) => {
