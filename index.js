@@ -148,34 +148,16 @@ bot.onMessage(async (channel, user, message, self) => {
   }
   if(message == '!clearcontext') {
       const resetEndpoint = `https://api.openai.com/v1/engines/${modelId}/reset`;
-
-// Function to reset the model's history
-async function resetModelHistory() {
-    try {
-        const response = await axios.post(resetEndpoint, {}, {
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${apiKey}`
-            }
-        });
-        console.log('Model history reset successfully!');
-    } catch (error) {
-        console.error('Error resetting model history:', error.response.data);
-    }
-}
-
-// Call the function to reset the model's history
-resetModelHistory();
-  };
+      resetEndpoint();
 });
     if (ENABLE_CHANNEL_POINTS) {
-        console.log(`The message id is ${@user["msg-id"]}`);
+        console.log(`The message id is ${user["msg-id"]}`);
         if (user["msg-id"] === "highlighted-message") {
             console.log(`The message is ${message}`);
             const response = await openai_ops.make_openai_call(message);
             bot.say(channel, response);
-        }
-    }
+        }}
+    };
     // check if message is a command started with !COMMAND_NAME (e.g. !gpt) in lower-cased
     if (message.toLowerCase().startsWith(COMMAND_NAME)) {
         let text = message.slice(COMMAND_NAME.length);
