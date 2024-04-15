@@ -169,7 +169,7 @@ resetModelHistory();
   };
 });
     if (ENABLE_CHANNEL_POINTS) {
-        console.log(`The message id is ${user["msg-id"]}`);
+        console.log(`The message id is ${@user["msg-id"]}`);
         if (user["msg-id"] === "highlighted-message") {
             console.log(`The message is ${message}`);
             const response = await openai_ops.make_openai_call(message);
