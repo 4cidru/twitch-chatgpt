@@ -122,38 +122,15 @@ bot.connect(
 
 bot.onMessage(async (channel, user, message, self) => {
     if (self) return;
-    if(message == '!donate') {
-    client.say(channel, `@${user.username}, use https://tangia.co/tazcidity?media_share to media share gifs,soundbites, or videos `)
-  }
-  if(message == '!youtube') {
-    client.say(channel, `@${user.username}, https://www.youtube.com/channel/UCITKxueRdND9FoCkAsfpt7w `)
-  }
-  if(message == '!youtube2') {
-    client.say(channel, `@${user.username}, https://www.youtube.com/@videosbytaz/featured `)
-  }
-  if(message == '!discord') {
-    client.say(channel, `@${user.username}, https://discord.gg/Bva4Qe3ZRj `)
-  }
-  if(message == '!deviantart') {
-    client.say(channel, `@${user.username}, https://www.deviantart.com/tazcw `)
-  }
-  if(message == '!speedruns') {
-    client.say(channel, `@${user.username}, https://www.speedrun.com/users/Tazcidity `)
-  }
-  if(message == '!roll') {
-    client.say(channel, `@${user.username}, rolled a ${Math.floor(Math.random() * 6) +1}! `)
-  }
-  if(message == '!commands') {
-    client.say(channel, `@${user.username}, use the '!' for donate, youtube, youtube2, discord, deviantart, speedruns, use TazcidBot at the start of your request for AI chatting without '!', and roll. `)
-  }
-});
+
     if (ENABLE_CHANNEL_POINTS) {
         console.log(`The message id is ${user["msg-id"]}`);
         if (user["msg-id"] === "highlighted-message") {
             console.log(`The message is ${message}`);
             const response = await openai_ops.make_openai_call(message);
             bot.say(channel, response);
-        }};
+        }
+    }
     // check if message is a command started with !COMMAND_NAME (e.g. !gpt) in lower-cased
     if (message.toLowerCase().startsWith(COMMAND_NAME)) {
         let text = message.slice(COMMAND_NAME.length);
@@ -187,7 +164,8 @@ bot.onMessage(async (channel, user, message, self) => {
                 console.error(error);
             }
         }
-    };
+    }
+});
 
 app.ws('/check-for-updates', (ws, req) => {
     ws.on('message', (message) => {
