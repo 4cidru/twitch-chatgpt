@@ -146,9 +146,6 @@ bot.onMessage(async (channel, user, message, self) => {
   if(message == '!commands') {
     client.say(channel, `@${user.username}, use the '!' for donate, youtube, youtube2, discord, deviantart, speedruns, use TazcidBot at the start of your request for AI chatting without '!', and roll. `)
   }
-  if(message == '!clearcontext') {
-      const resetEndpoint = `https://api.openai.com/v1/engines/${modelId}/reset`;
-      resetEndpoint();
 });
     if (ENABLE_CHANNEL_POINTS) {
         console.log(`The message id is ${user["msg-id"]}`);
@@ -156,8 +153,7 @@ bot.onMessage(async (channel, user, message, self) => {
             console.log(`The message is ${message}`);
             const response = await openai_ops.make_openai_call(message);
             bot.say(channel, response);
-        }}
-    };
+        }};
     // check if message is a command started with !COMMAND_NAME (e.g. !gpt) in lower-cased
     if (message.toLowerCase().startsWith(COMMAND_NAME)) {
         let text = message.slice(COMMAND_NAME.length);
