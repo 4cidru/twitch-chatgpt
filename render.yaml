@@ -18,11 +18,11 @@ services:
       - key: MODEL_NAME
         value: "gpt-3.5-turbo"
       - key: COMMAND_NAME
-        value: "chat"
+        value: "TazcidBot"
       - key: TWITCH_USER  # https://dev.twitch.tv/console
         value: "TazcidBot"
       - key: TWITCH_AUTH  # https://twitchapps.com/tmi/
-        value: "oauth:r4a193972cnwttfowwd76buxfogcog"
+        value: "oauth:wh16idxysiygkzcbe3w9otknjuibjj"
       - key: SEND_USERNAME
         value: "true"
       - key: ENABLE_TTS
