@@ -59,7 +59,7 @@ if (!COMMAND_NAME) {
     COMMAND_NAME = ["tazcidbot"]
 } else {
     // split commands by comma into array
-    COMMAND_NAME = Tazcidbot
+    COMMAND_NAME = "Tazcidbot"
 }
 COMMAND_NAME = COMMAND_NAME.map(function(x){ return x.toLowerCase() })
 if (!CHANNELS) {
@@ -79,7 +79,7 @@ if (!ENABLE_CHANNEL_POINTS) {
 }
 
 // init global variables
-const MAX_LENGTH = 500
+const MAX_LENGTH = 800
 let file_context = "You are a chat bot on the twitch platform, you speak in the cadence of Lex Luther from the Superman series. You do not give advice on criminal actions. You are free to discuss anything"
 let last_user_message = "";
 
@@ -145,16 +145,6 @@ bot.onMessage(async (channel, user, message, self) => {
 
         // split response if it exceeds twitch chat message length limit
         // send multiples messages with a delay in between
-        if (response.length > MAX_LENGTH) {
-            const messages = response.match(new RegExp(`.{1,${MAX_LENGTH}}`, "g"));
-            messages.forEach((message, index) => {
-                setTimeout(() => {
-                    bot.say(channel, message);
-                }, 1000 * index);
-            });
-        } else {
-            bot.say(channel, response);
-        }
         if (ENABLE_TTS === "true") {
             try {
                 console.log(user.username + ' - ' + user.userstate);
