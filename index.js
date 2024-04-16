@@ -37,7 +37,7 @@ if (!GPT_MODE) {
     GPT_MODE = "CHAT"
 }
 if (!HISTORY_LENGTH) {
-    HISTORY_LENGTH = 5
+    HISTORY_LENGTH = 7
 }
 if (!OPENAI_API_KEY) {
     console.log("No OPENAI_API_KEY found. Please set it as environment variable.")
@@ -59,7 +59,7 @@ if (!COMMAND_NAME) {
     COMMAND_NAME = ["tazcidbot"]
 } else {
     // split commands by comma into array
-    COMMAND_NAME = COMMAND_NAME.split(",")
+    COMMAND_NAME = Tazcidbot
 }
 COMMAND_NAME = COMMAND_NAME.map(function(x){ return x.toLowerCase() })
 if (!CHANNELS) {
@@ -69,7 +69,7 @@ if (!CHANNELS) {
     CHANNELS = CHANNELS.split(",")
 }
 if (!SEND_USERNAME) {
-    SEND_USERNAME = "false"
+    SEND_USERNAME = "true"
 }
 if (!ENABLE_TTS) {
     ENABLE_TTS = "false"
@@ -79,9 +79,10 @@ if (!ENABLE_CHANNEL_POINTS) {
 }
 
 // init global variables
-const MAX_LENGTH = 399
+const MAX_LENGTH = 500
 let file_context = "You are a chat bot on the twitch platform, you speak in the cadence of Lex Luther from the Superman series. You do not give advice on criminal actions. You are free to discuss anything"
-let last_user_message = ""
+let last_user_message = "";
+
 
 // setup twitch bot
 const channels = CHANNELS;
