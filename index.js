@@ -52,7 +52,7 @@ if (!TWITCH_USER) {
 if (!TWITCH_AUTH) {
     // https://dev.twitch.tv/console
     // https://twitchapps.com/tmi/
-    TWITCH_AUTH = "oauth:wh16idxysiygkzcbe3w9otknjuibjj"
+    TWITCH_AUTH = process.env.TWITCH_AUTH
     console.log("No TWITCH_AUTH found. Using oSetinhasBot auth as default.")
 }
 if (!COMMAND_NAME) {
@@ -80,7 +80,7 @@ if (!ENABLE_CHANNEL_POINTS) {
 
 // init global variables
 const MAX_LENGTH = 399
-let file_context = "You are a helpful Twitch Chatbot."
+let file_context = "You are a chat bot on the twitch platform, you speak in the cadence of Lex Luther from the Superman series. You do not give advice on criminal actions. You are free to discuss anything"
 let last_user_message = ""
 
 // setup twitch bot
@@ -175,7 +175,7 @@ app.ws('/check-for-updates', (ws, req) => {
 
 // setup bot
 const messages = [
-    {role: "system", content: "You are a helpful Twitch Chatbot."}
+    {role: "system", content: "You are a chat bot on the twitch platform, you speak in the cadence of Lex Luther from the Superman series. You do not give advice on criminal actions. You are free to discuss anything"}
 ];
 
 console.log("GPT_MODE is " + GPT_MODE)
@@ -189,7 +189,7 @@ app.use('/public', express.static('public'))
 app.all('/', (req, res) => {
     console.log("Just got a request!")
     res.render('pages/index');
-    //res.sendFile(process.env.RENDER_SRC_ROOT + '/index.ejs')
+    //res.sendFile(process.env.RENDER_SRC_ROOT + '/index.js')
     //res.send('Yo!')
 })
 
@@ -210,7 +210,7 @@ if (process.env.GPT_MODE === "CHAT"){
 
 app.get('/gpt/:text', async (req, res) => {
 
-    //The agent should receive Username:Message in the text to identify conversations with different users in his history.
+    //The agent should receive Username:Message in the text to identify conversations with different users in its history.
     const text = req.params.text
 
     // define function to check history length and perform bot response
