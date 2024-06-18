@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pedrojlazevedo/twitch-chatgpt.git"
+    "url": "t"
   },
-  "author": "Pedro Azevedo",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pedrojlazevedo/twitch-chatgpt/issues"
+    "url": ""
   },
   "homepage": "https://github.com/pedrojlazevedo/twitch-chatgpt#readme",
   "dependencies": {
