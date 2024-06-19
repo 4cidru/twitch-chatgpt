@@ -152,7 +152,7 @@ You will see the following web page, and it is directly connected to your twitch
 
 You can add it to your stream as a widget :)
 
-![img.png](imgs/img.png)
+
 
 ---
 
