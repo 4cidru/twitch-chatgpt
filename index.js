@@ -59,7 +59,7 @@ if (!COMMAND_NAME) {
     COMMAND_NAME = ["tazcidbot"]
 } else {
     // split commands by comma into array
-    COMMAND_NAME = "tazcidbot"
+    COMMAND_NAME = COMMAND_NAME.split(",")
 }
 COMMAND_NAME = COMMAND_NAME.map(function(x){ return x.toLowerCase() })
 if (!CHANNELS) {
