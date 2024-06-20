@@ -56,7 +56,7 @@ if (!TWITCH_AUTH) {
     console.log("No TWITCH_AUTH found. Using oSetinhasBot auth as default.")
 }
 if (!COMMAND_NAME) {
-    COMMAND_NAME = ["nimhzaT"]
+    COMMAND_NAME = ["!nimhzaT"]
 } else {
     // split commands by comma into array
     COMMAND_NAME = COMMAND_NAME.split(",")
@@ -180,8 +180,8 @@ app.use('/public', express.static('public'))
 app.all('/', (req, res) => {
     console.log("Just got a request!")
     res.render('pages/index');
-    //res.sendFile(process.env.RENDER_SRC_ROOT + '/index.js')
-    //res.send('Yo!')
+    res.sendFile(process.env.RENDER_SRC_ROOT + '/index.js')
+    res.send('Yo!')
 })
 
 if (process.env.GPT_MODE === "CHAT"){
