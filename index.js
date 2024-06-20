@@ -69,13 +69,16 @@ if (!CHANNELS) {
     CHANNELS = CHANNELS.split(",")
 }
 if (!SEND_USERNAME) {
-    SEND_USERNAME = "true"
+    SEND_USERNAME = true
 }
 if (!ENABLE_TTS) {
-    ENABLE_TTS = "false"
+    ENABLE_TTS = false
+    else {
+        bot.say(channel,response);
+        }
 }
 if (!ENABLE_CHANNEL_POINTS) {
-    ENABLE_CHANNEL_POINTS = "false";
+    ENABLE_CHANNEL_POINTS = false;
 }
 
 // init global variables
@@ -145,7 +148,7 @@ bot.onMessage(async (channel, user, message, self) => {
 
         // split response if it exceeds twitch chat message length limit
         // send multiples messages with a delay in between
-        if (ENABLE_TTS === "true") {
+        if (ENABLE_TTS === true) {
             try {
                 console.log(user.username + ' - ' + user.userstate);
                 const ttsAudioUrl = await bot.sayTTS(channel, response, user.userstate);
