@@ -71,12 +71,11 @@ if (!CHANNELS) {
 if (!SEND_USERNAME) {
     SEND_USERNAME = true
 }
-if (!ENABLE_TTS) {
+if (!ENABLE_TTS) 
     ENABLE_TTS = false
     else {
         bot.say(channel,response);
         }
-}
 if (!ENABLE_CHANNEL_POINTS) {
     ENABLE_CHANNEL_POINTS = false;
 }
