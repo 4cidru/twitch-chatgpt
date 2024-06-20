@@ -46,24 +46,24 @@ if (!MODEL_NAME) {
     MODEL_NAME = "gpt-3.5-turbo"
 }
 if (!TWITCH_USER) {
-    TWITCH_USER = "nimhzaT"
-    console.log("No TWITCH_USER found. Using oSetinhasBot as default.")
+    TWITCH_USER = "Tazcidbot"
+    console.log("No TWITCH_USER found. Using nimhzaT as default.")
 }
 if (!TWITCH_AUTH) {
     // https://dev.twitch.tv/console
     // https://twitchapps.com/tmi/
     TWITCH_AUTH = process.env.TWITCH_AUTH
-    console.log("No TWITCH_AUTH found. Using oSetinhasBot auth as default.")
+    console.log("No TWITCH_AUTH found. Using nimhzaT auth as default.")
 }
 if (!COMMAND_NAME) {
-    COMMAND_NAME = ["!nimhzaT"]
+    COMMAND_NAME = ["tazcidbot"]
 } else {
     // split commands by comma into array
     COMMAND_NAME = COMMAND_NAME.split(",")
 }
 COMMAND_NAME = COMMAND_NAME.map(function(x){ return x.toLowerCase() })
 if (!CHANNELS) {
-    CHANNELS = ["Tazcidity", "nimhzaT"]
+    CHANNELS = ["Tazcidity", "Tazcidbot"]
 } else {
     // split channels by comma into array
     CHANNELS = CHANNELS.split(",")
