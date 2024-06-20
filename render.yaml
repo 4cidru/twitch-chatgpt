@@ -14,13 +14,13 @@ services:
       - key: GPT_MODE
         value: "CHAT"
       - key: HISTORY_LENGTH
-        value: "3"
+        value: "7"
       - key: MODEL_NAME
         value: "gpt-3.5-turbo"
       - key: COMMAND_NAME
-        value: "TazcidBot"
+        value: "!nimhzaT"
       - key: TWITCH_USER  # https://dev.twitch.tv/console
-        value: "TazcidBot"
+        value: "nimhzaT"
       - key: TWITCH_AUTH  # https://twitchapps.com/tmi/
         value: "oauth:44s3vgydzdd9y8ui72l1a1upzi8js4"
       - key: SEND_USERNAME
