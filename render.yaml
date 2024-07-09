@@ -22,7 +22,7 @@ services:
       - key: TWITCH_USER  # https://dev.twitch.tv/console
         value: "tazcidbot"
       - key: TWITCH_AUTH  # https://twitchapps.com/tmi/
-        value: "oauth:0s4p4n1ymi1p9o79uk8jpu8u1sjajd"
+        value: "oauth:lsrczrlaq7gy0pqxav66pqf0yprlmv"
       - key: SEND_USERNAME
         value: "true"
       - key: ENABLE_TTS
