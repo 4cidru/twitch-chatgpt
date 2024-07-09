@@ -22,10 +22,10 @@ services:
       - key: TWITCH_USER  # https://dev.twitch.tv/console
         value: "tazcidbot"
       - key: TWITCH_AUTH  # https://twitchapps.com/tmi/
-        value: "oauth:1olgvhkvha80wk8ey6mm998n386v30"
+        value: <twitch-auth>
       - key: SEND_USERNAME
         value: "true"
       - key: ENABLE_TTS
-        value: "false"
+        value: "true"
       - key: ENABLE_CHANNEL_POINTS
         value: "true"
