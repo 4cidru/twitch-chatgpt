@@ -4,7 +4,7 @@ services:
     runtime: node
     branch: main
     plan: free
-    buildCommand: npm install
+    buildCommand: npm install && npm install ws
     startCommand: npm start
     envVars:
       - key: OPENAI_API_KEY
